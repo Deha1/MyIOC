@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans>
+    <bean id="student" class="springframework.ioc.entity.Student" >
+        <property name="name" value="dehai"></property>
+        <property name="age" value="21"></property>
+    </bean>
+
+    <bean id="teacher" class="springframework.ioc.entity.Teacher">
+        <property id="1" name="name" ref="ocean"></property>
+        <property name="student" ref="student"></property>
+    </bean>
+    <bean id="person" class="springframework.ioc.entity.Person" scope="singleton">
+        <property name="teacher" ref="teacher"></property>
+        <property name="student" ref="student"></property>
+    </bean>
+
+</beans>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans>
+<bean id="getBeanTest" class="springframework.lookup_method.GetBeanTest">
+    <!--lookup-method注入-->
+    <lookup-method name="getBean" bean="basketballPlayer"/>
+</bean>
+
+<bean id="basketballPlayer" class="springframework.lookup_method.BasketballPlayer">
+</bean>
+</beans>
